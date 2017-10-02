@@ -68,7 +68,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "boiling-dusk-44277.herokuapp.com" }
   ActionMailer::Base.smtp_settings = {
     address: 'smtp.163.com',
-    port: 465,
+    port: 25,
     authentication: :login,
     user_name: 'asdmjhe2010@163.com',
     password: '3904670542463274',
