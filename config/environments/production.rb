@@ -62,6 +62,22 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "sample_app_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: "163.com" }
+  ActionMailer::Base.smtp_settings = {
+    address: 'smtp.163.com',
+    port: '465',
+    authentication: :plain,
+    user_name: 'asdmjhe2010@163.com',
+    password: '3904670542463274',
+    domain: '163.com',
+    enable_starttls_auto: true
+  }
+
+
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
