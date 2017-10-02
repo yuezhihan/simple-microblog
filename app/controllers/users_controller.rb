@@ -19,9 +19,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params);
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to the Sample App."
-      redirect_to user_url(@user)
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end
@@ -67,13 +67,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
-
-【部门群】
-1. 请各位部长尽快建立部门群，并安排假期学习任务（可以根据每个人的情况给予学习建议，也可统一安排小任务）。
-2. 各位部长负责想方设法活跃群内气氛，并与新同学建立革命友谊。
-3. 如果不介意的话，请把我和hr @周金梦 拉进部门群。
-
-
-
-
 end

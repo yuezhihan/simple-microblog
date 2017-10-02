@@ -18,7 +18,6 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   end
 
   test "successful edit with friendly forwarding" do
-    # debugger
     get edit_user_path(@user)
     log_in(@user)
     assert_redirected_to edit_user_path(@user)
