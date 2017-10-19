@@ -23,3 +23,4 @@ class ActiveSupport::TestCase
   BASE_TITLE = "Ruby on Rails Tutorial Sample App"
   # Add more helper methods to be used by all tests here...
 end
+
