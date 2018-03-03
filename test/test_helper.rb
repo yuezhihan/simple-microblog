@@ -20,7 +20,7 @@ class ActiveSupport::TestCase
   end
 
 
-  BASE_TITLE = "Ruby on Rails Tutorial Sample App"
+  BASE_TITLE = "Weibo App"
   # Add more helper methods to be used by all tests here...
 end
 

@@ -1,36 +1,6 @@
-# Ruby on Rails Tutorial sample application
+Simple Microblog
+=============
 
-This is the sample application for [*Ruby on Rails Tutorial: Learn Web Development with Rails*](http://www.railstutorial.org/) by [Michael Hartl](http://www.michaelhartl.com/).
+以Ruby on Rails Tutorial的案例为基础，实现了一个简单的微博系统。
 
-## License
-
-All source code in the [Ruby on Rails Tutorial](http://railstutorial.org/) is available jointly under the MIT License and the Beerware License. See [LICENSE.md](LICENSE.md) for details.
-
-## Getting started
-
-To get started with the app, clone the repo and then install the needed gems:
-
-```
-$ bundle install --without production
-```
-
-Next, migrate the database:
-
-```
-$ rails db:migrate
-```
-
-Finally, run the test suite to verify that everything is working correctly:
-
-```
-$ rails test
-```
-
-If the test suite passes, you'll be ready to run the app in a local server:
-
-```
-$ rails server
-```
-
-For more information, see the [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
-
+在实践过程中，对书中案例进行了许多细节上的改进，如我认为helper中应只包含用于生成视图的代码，而不应该混入其他东西，此处我使用了Concerns，还有test，不应该引入app中的业务逻辑代码。
